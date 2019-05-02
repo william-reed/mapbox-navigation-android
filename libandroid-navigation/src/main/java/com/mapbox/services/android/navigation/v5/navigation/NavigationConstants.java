@@ -3,6 +3,8 @@ package com.mapbox.services.android.navigation.v5.navigation;
 import android.support.annotation.IntDef;
 import android.support.annotation.StringDef;
 
+import com.mapbox.services.android.navigation.v5.internal.navigation.RouteProcessorBackgroundThread;
+
 /**
  * Navigation constants
  *
