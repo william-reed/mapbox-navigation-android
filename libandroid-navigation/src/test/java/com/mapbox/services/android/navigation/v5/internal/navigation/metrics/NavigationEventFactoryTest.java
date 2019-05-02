@@ -1,11 +1,11 @@
-package com.mapbox.services.android.navigation.v5.navigation.metrics;
+package com.mapbox.services.android.navigation.v5.internal.navigation.metrics;
 
 import android.location.Location;
 
 import com.google.gson.Gson;
 import com.mapbox.android.telemetry.TelemetryUtils;
 import com.mapbox.geojson.Point;
-import com.mapbox.services.android.navigation.v5.routeprogress.MetricsRouteProgress;
+import com.mapbox.services.android.navigation.v5.internal.navigation.routeprogress.MetricsRouteProgress;
 import com.mapbox.services.android.navigation.v5.utils.DistanceFormatter;
 
 import org.junit.Before;
@@ -182,7 +182,8 @@ public class NavigationEventFactoryTest {
     when(rerouteEvent.getNewRouteGeometry()).thenReturn(newRouteGeo);
 
     NavigationRerouteEvent navigationRerouteEvent = NavigationEventFactory
-      .buildNavigationRerouteEvent(phoneState, sessionState, metricsRouteProgress, locationBefore, SDK_ID, rerouteEvent);
+      .buildNavigationRerouteEvent(phoneState, sessionState, metricsRouteProgress, locationBefore, SDK_ID,
+        rerouteEvent);
     checkNavigationEvent(navigationRerouteEvent);
     checkNavigationStepData(navigationRerouteEvent.getStep());
     assertEquals(newDistanceRemaining, navigationRerouteEvent.getNewDistanceRemaining(), 0);
@@ -233,7 +234,7 @@ public class NavigationEventFactoryTest {
     assertNotNull(s);
   }
 
-  private void checkNavigationStepData(NavigationStepData data){
+  private void checkNavigationStepData(NavigationStepData data) {
     assertEquals(PRE_INSTRU, data.getPreviousInstruction());
     assertEquals(PRE_MODIFIER, data.getPreviousModifier());
     assertEquals(PRE_NAME, data.getPreviousName());
@@ -245,6 +246,7 @@ public class NavigationEventFactoryTest {
     assertEquals(DISTANCE_REMAINING, data.getDistanceRemaining());
     assertEquals(DURATION_REMAINING, data.getDurationRemaining());
   }
+
   private void checkNavigationEvent(NavigationEvent event) {
     assertEquals(APP_STATE, event.getApplicationState());
     assertEquals(AUDIO_TYPE, event.getAudioType());

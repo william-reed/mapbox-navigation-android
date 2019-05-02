@@ -1,8 +1,8 @@
-package com.mapbox.services.android.navigation.v5.navigation.metrics.audio;
+package com.mapbox.services.android.navigation.v5.internal.navigation.metrics.audio;
 
 import android.content.Context;
 
-public class UnknownAudioType implements AudioTypeResolver {
+class UnknownAudioType implements AudioTypeResolver {
   private static final String UNKNOWN = "unknown";
 
   @Override
