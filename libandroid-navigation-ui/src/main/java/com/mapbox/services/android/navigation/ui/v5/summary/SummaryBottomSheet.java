@@ -1,16 +1,16 @@
 package com.mapbox.services.android.navigation.ui.v5.summary;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 
 import com.mapbox.services.android.navigation.ui.v5.NavigationViewModel;
 import com.mapbox.services.android.navigation.ui.v5.R;
@@ -25,7 +25,7 @@ import com.mapbox.services.android.navigation.v5.utils.LocaleUtils;
 import java.text.DecimalFormat;
 
 /**
- * A view with {@link android.support.design.widget.BottomSheetBehavior}
+ * A view with {@link com.google.android.material.bottomsheet.BottomSheetBehavior}
  * that displays route summary information during navigation.
  * <p>
  * Can be expanded / collapsed to show / hide the list of

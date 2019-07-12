@@ -1,6 +1,6 @@
 package com.mapbox.services.android.navigation.ui.v5;
 
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import com.mapbox.api.directions.v5.models.DirectionsRoute;
 import com.mapbox.api.directions.v5.models.LegStep;

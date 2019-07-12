@@ -1,6 +1,6 @@
 package com.mapbox.services.android.navigation.v5.navigation;
 
-import android.support.v4.util.Pair;
+import androidx.core.util.Pair;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
